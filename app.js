@@ -16,9 +16,7 @@ var completeTasksHolder=document.getElementById("complete-task__list");//complet
 
 //New task list item
 var createNewTaskElement=function(taskString){
-
     var listItem=document.createElement("li");
-
     //input (checkbox)
     var checkBox=document.createElement("input");//checkbx
     //label
@@ -27,7 +25,6 @@ var createNewTaskElement=function(taskString){
     var editInput=document.createElement("input");//text
     //button.edit
     var editButton=document.createElement("button");//edit button
-
     //button.delete
     var deleteButton=document.createElement("button");//delete button
     var deleteButtonImg=document.createElement("img");//delete button image
@@ -62,7 +59,6 @@ var createNewTaskElement=function(taskString){
 }
 
 var addTask=function(){
-    console.log("Add Task...");
     //Create a new list item with the text from the #add-task__input:
     if (!taskInput.value) return;
     var listItem=createNewTaskElement(taskInput.value);
@@ -78,10 +74,6 @@ var addTask=function(){
 //Edit an existing task.
 
 var editTask=function(){
-    console.log("Edit Task...");
-    console.log("Change 'edit' to 'save'");
-
-
     var listItem=this.parentNode;
 
     var editInput=listItem.querySelector('input[type=text]');
@@ -107,8 +99,6 @@ var editTask=function(){
 
 //Delete task.
 var deleteTask=function(){
-    console.log("Delete Task...");
-
     var listItem=this.parentNode;
     var ul=listItem.parentNode;
     //Remove the parent list item from the ul.
@@ -119,8 +109,6 @@ var deleteTask=function(){
 
 //Mark task complete
 var taskcomplete=function(){
-    console.log("Complete Task...");
-
     //Append the task list item to the #complete__list
     var listItem=this.parentNode;
 
@@ -134,7 +122,6 @@ var taskcomplete=function(){
 
 
 var taskIncomplete=function(){
-    console.log("Incomplete Task...");
     //Mark task as incomplete.
     //When the checkbox is unchecked
     //Append the task list item to the #incomplete__list.
@@ -151,7 +138,6 @@ var taskIncomplete=function(){
 
 
 var ajaxRequest=function(){
-    console.log("AJAX Request");
 }
 
 //The glue to hold it all together.
@@ -164,7 +150,6 @@ addButton.addEventListener("click",ajaxRequest);
 
 
 var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
-    console.log("bind list item events");
 //select ListItems children
     var checkBox=taskListItem.querySelector("input[type=checkbox]");
     var editButton=taskListItem.querySelector("button.button_edit");
