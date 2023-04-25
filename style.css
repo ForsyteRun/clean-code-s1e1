@@ -86,8 +86,8 @@ button {
 }
 
 /* Heading */
-.incomplete__title, 
-.complete__title,
+.incomplete-task__title, 
+.complete-task__title,
 .add-task__label {
   color: #333;
   font-weight: 700;
